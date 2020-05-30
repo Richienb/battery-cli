@@ -7,7 +7,7 @@ Get battery level and charging status.
 ## Install
 
 ```sh
-npm install battery --global
+npm install battery-cli --global
 ```
 
 ## Usage
