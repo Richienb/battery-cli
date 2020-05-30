@@ -12,7 +12,7 @@ meow(`
 
     Examples
       $ battery
-      Charging, 100%
+      ${chalk.greenBright("Charging")}, ${chalk.greenBright("100%")}
 `)
 
 module.exports = (async () => {
