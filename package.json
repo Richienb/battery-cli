@@ -1,6 +1,6 @@
 {
 	"name": "battery-cli",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Get battery level and charging status.",
 	"repository": "https://github.com/Richienb/battery-cli.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
