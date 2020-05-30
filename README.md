@@ -1,41 +1,22 @@
-# the-module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# battery-cli [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/battery-cli/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/battery-cli)
 
-My awesome module.
+Get battery level and charging status.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/battery-cli.png)](https://npmjs.com/package/battery-cli)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install battery --global
 ```
 
 ## Usage
 
-```js
-const theModule = require("the-module");
-
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+```sh
+$ battery
+Charging, 100%
 ```
 
-## API
+## Related
 
-### theModule(input, options?)
-
-#### input
-
-Type: `string`
-
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+- [battery](https://github.com/Richienb/battery) - CLI for this module.

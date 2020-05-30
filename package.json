@@ -1,14 +1,15 @@
 {
-	"name": "the-module",
+	"name": "battery-cli",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "Get battery level and charging status.",
+	"repository": "https://github.com/Richienb/battery-cli.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
-	"main": "index.js",
+	"bin": {
+		"battery": "cli.js"
+	},
 	"files": [
-		"index.js",
-		"index.d.ts"
+		"cli.js"
 	],
 	"engines": {
 		"node": ">=10"
@@ -17,11 +18,25 @@
 		"lint": "xo",
 		"test": "xo && ava"
 	},
-	"keywords": [],
-	"dependencies": {},
+	"keywords": [
+		"cli",
+		"battery",
+		"level",
+		"charging",
+		"charge",
+		"windows",
+		"macos",
+		"linux"
+	],
+	"dependencies": {
+		"battery": "^1.0.1",
+		"chalk": "^4.0.0",
+		"meow": "^7.0.1"
+	},
 	"devDependencies": {
 		"ava": "^3.8.1",
 		"eslint-config-richienb": "^0.4.2",
+		"execa": "^4.0.2",
 		"xo": "^0.30.0"
 	},
 	"resolutions": {

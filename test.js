@@ -1,13 +1,7 @@
 const test = require("ava")
-const theModule = require(".")
+const execa = require("execa")
 
-test("main", t => {
-	t.throws(() => {
-		theModule(123)
-	}, {
-		instanceOf: TypeError,
-		message: "Expected a string, got number"
-	})
-
-	t.is(theModule("unicorns"), "unicorns & rainbows")
+test("main", async t => {
+	const { stdout } = await execa("./cli.js")
+	t.is(typeof stdout, "string")
 })
