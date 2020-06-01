@@ -22,11 +22,9 @@ module.exports = (async () => {
 
 	if (level > 0.5) {
 		levelColour = "greenBright"
-	} else if (level > 0.3) {
+	} else if (level > 0.2) {
 		levelColour = "yellowBright"
-	} else if (level > 0.15) {
-		levelColour = "orangeBright"
 	}
 
-	console.log(`${charging ? chalk.greenBright("Charging") : chalk.redBright("Not charging")}, ${chalk[levelColour](`${level * 100}%`)}`)
+	console.log(`${charging ? chalk.greenBright("Charging") : chalk.redBright("Not charging")}, ${chalk[levelColour](`${Math.round(level * 100)}%`)}`)
 })()
