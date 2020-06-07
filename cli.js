@@ -4,6 +4,7 @@
 
 const chalk = require("chalk")
 const meow = require("meow")
+const toPercent = require("to-percent")
 const battery = require("battery")
 
 const getLevelColour = level => {
@@ -30,5 +31,5 @@ meow(`
 module.exports = (async () => {
 	const { level, charging } = await battery()
 
-	console.log(`${charging ? chalk.greenBright("Charging") : chalk.redBright("Not charging")}, ${chalk[getLevelColour(level)](`${Math.round(level * 100)}%`)}`)
+	console.log(`${charging ? chalk.greenBright("Charging") : chalk.redBright("Not charging")}, ${chalk[getLevelColour(level)](`${toPercent(level)}%`)}`)
 })()
