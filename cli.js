@@ -6,6 +6,18 @@ const chalk = require("chalk")
 const meow = require("meow")
 const battery = require("battery")
 
+const getLevelColour = level => {
+	if (level > 0.5) {
+		return "greenBright"
+	}
+
+	if (level > 0.2) {
+		return "yellowBright"
+	}
+
+	return "redBright"
+}
+
 meow(`
     Usage
       $ battery
@@ -18,13 +30,5 @@ meow(`
 module.exports = (async () => {
 	const { level, charging } = await battery()
 
-	let levelColour = "redBright"
-
-	if (level > 0.5) {
-		levelColour = "greenBright"
-	} else if (level > 0.2) {
-		levelColour = "yellowBright"
-	}
-
-	console.log(`${charging ? chalk.greenBright("Charging") : chalk.redBright("Not charging")}, ${chalk[levelColour](`${Math.round(level * 100)}%`)}`)
+	console.log(`${charging ? chalk.greenBright("Charging") : chalk.redBright("Not charging")}, ${chalk[getLevelColour(level)](`${Math.round(level * 100)}%`)}`)
 })()
